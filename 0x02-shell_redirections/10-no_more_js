@@ -1,1 +1,2 @@
-fing . -type "*.js" -delete
+#!/bin/bash
+find . -type "*.js" -delete
