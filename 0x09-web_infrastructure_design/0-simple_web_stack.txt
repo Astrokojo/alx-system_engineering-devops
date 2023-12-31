@@ -1,0 +1,33 @@
+What is a server?
+Computer hardware or software that provides a service to another computer.
+
+What is the role of the domain name?
+It gives humans a name they can use as an alias to an ip address.
+
+What type of DNS record is in www.foobar.com?
+it is a CNAME record that points to 'foobar.com'. Found it using the 'dig' cmd.
+
+What is the role of the web server?
+To manage the initial processing of  incoming HTTP requests and hosts website files.
+
+What is the role of the application server?
+contains the business logic, manages user sessions and interacts with the database
+
+What is the role of the database?
+manages and stores the website data i.e. user info, configurations, content, etc.
+
+What is hte server using to communicate with the user's computer requesting the web page?
+TCP/IP protocol suite
+
+What are the issues with this structure ;?
+	-SPOF;  it relies on a single server to handle all incoming traffic and requests. 
+		If this server fails due to hardware issues, software crashes, or any other reason, 
+		the entire website becomes inaccessible. 
+
+	-Downtime for maintenance; Any maintenance checks on a component will require the server to be shut off 					causing significant amount of downtime
+
+	-Scalability: Since there is only one server handling all the requests, 
+			an increase in traffic or workload cannot be accomodated
+						
+		
+
