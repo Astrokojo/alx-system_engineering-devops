@@ -1,5 +1,8 @@
 # Secured and Monitored Web Infrastructure
 
+![2-secured_monitored_web_infrastructure](https://github.com/Astrokojo/alx-system_engineering-devops/assets/60085282/1424e431-2641-4df9-9f7c-6148081b2f76)
+
+https://github.com/Astrokojo/alx-system_engineering-devops/blob/29c7772fccf497049c11cf98c66717ab95e46708/0x09-web_infrastructure_design/2-secured_and_monitored_web_infrastructure
 
 ## Description
 
