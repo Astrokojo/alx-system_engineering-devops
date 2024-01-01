@@ -1,0 +1,22 @@
+# Distributed Web Infrastructure
+
+
+## Description
+
+This is a distributed web infrastructure that uses a load balancer to reduce the traffic to the primary server by distributing some of the load from the master server to a replica server
+
+## Specifics About This Infrastructure
+
++ The distribution algorithm the load balancer is configured with and how it works.<br/>Theload balancer uses a *Round Robin* distribution algorithm. It evenly distributes requests sequentially in a circular order.
+
++ The setup enabled by the load-balancer.<br/>The HAProxy load-balancer is setup as *Active-Passive*. It involves one active load balancer handling traffic while the passive one remains on standby, ready to take over in case the active one fails.
+
++ How a database *Primary-Replica* (*Master-Slave*) cluster works.<br/>The Master database node can accept reads/writes while the Replica can only accept reads
+
+## Issues With This Infrastructure
+
++ There are multiple SPOF (Single Point Of Failure).<br/>For example, if the Primary MySQL database server is down, the entire site would be unable to make changes to the site (including adding or removing users). The server containing the load balancer and the application server connecting to the primary database server are also SPOFs.
+
++ Security issues.<br/>The data transmitted over the network isn't encrypted using an SSL certificate so hackers can spy on the network. There is no way of blocking unauthorized IPs since there's no firewall installed on any server.
+
++ No monitoring.<br/>We have no way of knowing the status of each server since they're not being monitored.
