@@ -1,5 +1,8 @@
 # Distributed Web Infrastructure
 
+![1-distributed_web_infrastructure](https://github.com/Astrokojo/alx-system_engineering-devops/assets/60085282/d84054ae-c157-4560-9068-9b245a1bf57d)
+
+https://github.com/Astrokojo/alx-system_engineering-devops/blob/eaf1c5cc5464148a49ffa1b62b0e0fd172dcf5e1/0x09-web_infrastructure_design/1-distributed_web_infrastructure
 
 ## Description
 
@@ -11,7 +14,9 @@ This is a distributed web infrastructure that uses a load balancer to reduce the
 
 + The setup enabled by the load-balancer.<br/>The HAProxy load-balancer is setup as *Active-Passive*. It involves one active load balancer handling traffic while the passive one remains on standby, ready to take over in case the active one fails.
 
-+ How a database *Primary-Replica* (*Master-Slave*) cluster works.<br/>The Master database node can accept reads/writes while the Replica can only accept reads
++ How a database *Primary-Replica* (*Master-Slave*) cluster works.<br/>The database cluster works as a setup with a Primary node, responsible for handling write operations and maintaining the authoritative database copy, and one or more Replica nodes that primarily serve read queries, provide redundancy, and act as backups.
+
++ Difference between the Primary node and the Replica node?<br/> Primary node can write and read, Replica can only read
 
 ## Issues With This Infrastructure
 
