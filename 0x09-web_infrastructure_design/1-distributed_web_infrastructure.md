@@ -1,5 +1,7 @@
 # Distributed Web Infrastructure
 
+![1-distributed_web_infrastructure](https://github.com/Astrokojo/alx-system_engineering-devops/assets/60085282/d84054ae-c157-4560-9068-9b245a1bf57d)
+
 
 ## Description
 
