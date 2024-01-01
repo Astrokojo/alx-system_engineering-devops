@@ -1,7 +1,7 @@
 # Simple Web Stack
 
 ![0-simple_web_stack](https://github.com/Astrokojo/alx-system_engineering-devops/assets/60085282/90dbb7f9-3d55-401e-92a0-a3f803548f76)
-
+https://github.com/Astrokojo/alx-system_engineering-devops/blob/6ca7dd088f1f708c52ec1243db21fbe95b34877a/0x09-web_infrastructure_design/0-simple_web_stack
 ## Description
 
 This is a simple web infrastructure with a single server that hosts a website that is reachable via `www.foobar.com`.
