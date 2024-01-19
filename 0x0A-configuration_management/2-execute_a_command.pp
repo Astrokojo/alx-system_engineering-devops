@@ -1,8 +1,5 @@
-# kill_process.pp
+# A manifest that kills a process named killmenow
 
-exec { 'killmenow_process':
-  command     => 'pkill killmenow',
-  path        => '/usr/local/bin:/usr/bin:/bin',
-  refreshonly => true,
-  subscribe   => File['/path/to/trigger_file'], # Replace with an appropriate trigger file
+exec { 'kill_killmenow':
+  command     => '/usr/bin/pkill killmenow',
 }
