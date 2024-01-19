@@ -6,4 +6,3 @@ exec { 'killmenow_process':
   refreshonly => true,
   subscribe   => File['/path/to/trigger_file'], # Replace with an appropriate trigger file
 }
-
