@@ -1,16 +1,20 @@
-#!/usr/bin/pup
 # install_flask.pp
-package { 'Werkzeug':
-	ensure => '2.1.1',
-	provider => 'pip3',
-}
 
 package { 'python3-pip':
-  ensure => present,
+  ensure => 'installed',
 }
 
-package { 'Flask':
-	ensure => '2.1.0',
-	provider => 'pip3',
-	require => Package['python3-pip'],
+exec { 'install_flask':
+  command => '/usr/bin/pip3 install Flask==2.1.0',
+  path    => '/usr/local/bin:/usr/bin:/bin',
+  unless  => '/usr/bin/pip3 show Flask | grep -q "Version: 2.1.0"',
+  require => Package['python3-pip'],
 }
+
+# Optionally, refresh the shell after installation to pick up the newly installed Flask
+exec { 'refresh_shell':
+  command     => 'exec bash',
+  refreshonly => true,
+  subscribe   => Exec['install_flask'],
+}
+
