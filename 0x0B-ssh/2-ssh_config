@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Default settings for host
+# Default settings for all hosts
 Host *
 	# Use the private key for authentication
         IdentityFile ~/.ssh/school
