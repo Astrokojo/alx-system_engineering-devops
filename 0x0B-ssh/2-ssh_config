@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# ~/.ssh/config
+#
+# Default settings for host
+Host 54.197.75.160
+
+	Hostname 478490-web-01
+
+	# Use the private key for authentication
+        IdentityFile ~/.ssh/school
+
+	# Disable password authentication
+	PasswordAuthentication no
