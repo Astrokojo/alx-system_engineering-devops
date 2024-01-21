@@ -1,6 +1,3 @@
-#!/usr/bin/env bash
-# ~/.ssh/config
-#
 # Default settings for host
 Host 54.197.75.160
 
