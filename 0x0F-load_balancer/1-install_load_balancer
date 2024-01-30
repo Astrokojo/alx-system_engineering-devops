@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+# Script installs and configures HAProxy as a load balancer on an Ubuntu machine
+
+# Update the package list
+sudo apt-get update && sudo apt-get upgrade -y
+
+# Install HAProxy
+apt-get install -y --no-install-recommends software-properties-common
+add-apt-repository -y ppa:vbernat/haproxy-2.9
+apt-get install haproxy=2.9.\*
+
+# Configure HAProxy
+sudo tee -a /etc/haproxy/haproxy.cfg > /dev/null << EOF
+frontend web
+    bind *:80
+    mode http
+    default_backend web_servers
+
+backend web_servers
+    mode http
+    balance roundrobin
+    server web-01 [STUDENT_ID]-web-01 check
+    server web-02 [STUDENT_ID]-web-02 check
+EOF
+
+# Enable HAProxy to start on boot
+sudo systemctl enable haproxy
+
+# Start HAProxy
+sudo systemctl start haproxy
