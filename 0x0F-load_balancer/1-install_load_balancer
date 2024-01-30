@@ -2,7 +2,7 @@
 # Script installs and configures HAProxy as a load balancer on an Ubuntu 16.04
 
 # Update the package list
-sudo apt-get update && sudo apt-get upgrade -y
+sudo apt-get update -y
 
 # Install HAProxy
 sudo apt-get install haproxy -y
