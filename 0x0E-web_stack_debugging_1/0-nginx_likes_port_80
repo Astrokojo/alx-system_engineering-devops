@@ -1,10 +1,10 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# Script configures a server to specific requirments
+
+apt-get update
 
 # Install Nginx (if not already installed)
-apt-get update
 apt-get install -y nginx
-
-# check etc/nginx/sites-availble for the config files
 
 # Configure Nginx to listen on port 80
 echo "server {
