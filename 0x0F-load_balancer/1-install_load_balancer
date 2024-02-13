@@ -17,8 +17,8 @@ frontend web
 backend web_servers
     mode http
     balance roundrobin
-    server web-01 [STUDENT_ID]-web-01 check
-    server web-02 [STUDENT_ID]-web-02 check
+    server web-01 478490-web-01 check
+    server web-02 478490-web-02 check
 EOF
 
 # Enable HAProxy to start on boot
