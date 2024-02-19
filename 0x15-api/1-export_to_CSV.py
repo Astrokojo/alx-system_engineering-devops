@@ -18,7 +18,7 @@ if __name__ == "__main__":
     user_name = employee.get("username")
 
     with open("{}.csv".format(user_id), "w", newline="") as file:
-        writer= csv.writer(file, quoting=csv.QUOTE_ALL)
+        writer = csv.writer(file, quoting=csv.QUOTE_ALL)
         [writer.writerow(
             [user_id, user_name, t.get("completed"), t.get("title")]
             ) for t in todos]
