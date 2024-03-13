@@ -35,9 +35,8 @@ server {
         proxy_pass http://127.0.0.1:5001/number_odd_or_even/$1;  # Proxy dynamic requests to a specified backend server with a variable part
     }
     
-    # Serve Airbnb_v3 API
     location /api {
-        proxy_pass http://127.0.0.1:5002/api;
+        proxy_pass http://127.0.0.1:5002/api;  # Serve Airbnb_v3 API
     }
 }
 
